@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-26T03:13:05.270Z</updated>
+  <updated>2019-08-27T08:09:27.444Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/08/26/postName/"/>
     <id>http://yoursite.com/2019/08/26/postName/</id>
     <published>2019-08-25T16:41:14.000Z</published>
-    <updated>2019-08-26T03:13:05.270Z</updated>
+    <updated>2019-08-27T08:09:27.444Z</updated>
     
     <content type="html"><![CDATA[<p>成年后第一次旅行是在省内。</p>]]></content>
     
@@ -35,6 +35,8 @@
     
     </summary>
     
+    
+      <category term="旅行" scheme="http://yoursite.com/tags/%E6%97%85%E8%A1%8C/"/>
     
   </entry>
   
