@@ -2004,7 +2004,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f5f;
+  background: #ff4e5d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3312,6 +3312,9 @@ pre .javascript .function {
 }
 body {
   background: url("/images/bj.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 70% 70%;
 /*这是设置底部文字, 看个人需要修改*/
 }
 body #footer > div > div {
