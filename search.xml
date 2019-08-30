@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[差你一次旅行]]></title>
     <url>%2F2019%2F08%2F26%2F1%2F</url>
-    <content type="text"><![CDATA[优秀的人，不是不合群，而是他们合群的人里面没有你 成年后第一次旅行是在省内。]]></content>
+    <content type="text"><![CDATA[行路常抒 人们都说：“桂林山水甲天下。”我们乘着木船，荡漾在漓江上，来观赏桂林的山水。 我看见过波澜壮阔的大海，玩赏过水平如镜的西湖，却从没看见过漓江这样的水。漓江的水真静啊，静得让你感觉不到它在流动；漓江的水真清啊，清得可以看见江底的沙石；漓江的水真绿啊，绿得仿佛那是一块无瑕的翡翠。船桨激起的微波扩散出一道道水纹，才让你感觉到船在前进，岸在后移。 我攀登过峰峦雄伟的泰山，游览过红叶似火的香山，却从没看见过桂林这一带的山，桂林的山真奇啊，一座座拔地而起，各不相连，像老人，像巨象，像骆驼，奇峰罗列，形态万千；桂林的山真秀啊，像翠绿的屏障，像新生的竹笋，色彩明丽，倒映水中；桂林的山真险啊，危峰兀立，怪石嶙峋，好像一不小心就会栽倒下来。 这样的山围绕着这样的水，这样的水倒映着这样的山，再加上空中云雾迷蒙，山间绿树红花，江上竹筏小舟，让你感到像是走进了连绵不断的画卷，真是“舟行碧波上，人在画中游”。 成年后第一次旅行是在省内。 留连]]></content>
       <tags>
         <tag>旅行</tag>
       </tags>
@@ -11,6 +11,6 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F08%2F26%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[优秀的人，不是不合群，而是他们合群的人里面没有你 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment 写作介绍1，字体介绍这是斜体 或 这也是斜体这是粗体这是加粗斜体这是删除线 2，分级标题一级标题二级标题三级标题四级标题五级标题六级标题3，超链接写法： 行内形式（本页跳转）：我的博客参考形式（新页跳转）：[我的博客][1]:https://lyx913.github.io/[2]:http://www.jianshu.com/自动链接：我的博客地址https://lyx913.github.io/ 4,列表无序列表：写法： 无序列表项1 无序列表项2 无序列表项3 有序列表：写法：1.有序列表项12.有序列表项23.有序列表项3 5，插入图片在 Hexo 中插入图片，首先需要将图片放在 source/img/ 文件夹下，然后如下方式进行插入： 6，表格 表头1 表头2 表头3 表头4 默认左对齐 左对齐 居中对其 右对齐 默认左对齐 左对齐 居中对其 右对齐 默认左对齐 左对齐 居中对其 右对齐]]></content>
   </entry>
 </search>
