@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="何处惹尘埃,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="花开易见落难寻" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="https://bbs.nga.cn/read.php?tid=24009004&amp;amp;forder_by=postdatedesc&amp;amp;rand=731 海外冒险岛~~制作方法详细版 [GMS] Hacking 101 [Bypassing, addresses, pointers] Announcements irc.fukt.us #maplestory /server ‐m irc.">
+<meta name="keywords" content="何处惹尘埃">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GMS脚本很严重吗">
+<meta property="og:url" content="http://lyx913.github.io/2020/12/06/何处惹尘埃/GMS脚本很严重吗/index.html">
+<meta property="og:site_name" content="花开易见落难寻">
+<meta property="og:description" content="https://bbs.nga.cn/read.php?tid=24009004&amp;amp;forder_by=postdatedesc&amp;amp;rand=731 海外冒险岛~~制作方法详细版 [GMS] Hacking 101 [Bypassing, addresses, pointers] Announcements irc.fukt.us #maplestory /server ‐m irc.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-12-06T10:15:20.627Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GMS脚本很严重吗">
+<meta name="twitter:description" content="https://bbs.nga.cn/read.php?tid=24009004&amp;amp;forder_by=postdatedesc&amp;amp;rand=731 海外冒险岛~~制作方法详细版 [GMS] Hacking 101 [Bypassing, addresses, pointers] Announcements irc.fukt.us #maplestory /server ‐m irc.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://lyx913.github.io/2020/12/06/何处惹尘埃/GMS脚本很严重吗/">
+
+
+
+
+
+  <title>GMS脚本很严重吗 | 花开易见落难寻</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="bg_content">
+  <canvas id="canvas"></canvas>
+  </div>
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">花开易见落难寻</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">穷极所思，可赴千里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            时间线
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lyx913.github.io/2020/12/06/何处惹尘埃/GMS脚本很严重吗/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="那方贤">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="花开易见落难寻">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">GMS脚本很严重吗</h1>
+        
+
+        <div class="post-meta">
+	  
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-06T18:11:23+08:00">
+                2020-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://bbs.nga.cn/read.php?tid=24009004&amp;forder_by=postdatedesc&amp;rand=731" target="_blank" rel="noopener">https://bbs.nga.cn/read.php?tid=24009004&amp;forder_by=postdatedesc&amp;rand=731</a></p>
+<p>海外冒险岛~~制作方法详细版</p>
+<p>[GMS] Hacking 101 [Bypassing, addresses, pointers]</p>
+<p>Announcements</p>
+<p>irc.fukt.us #maplestory</p>
+<p>/server ‐m irc.fukt.us ‐j #maplestory</p>
+<p>Remember that IRC is not the same as the forum. You may not be treated too kindly.</p>
+<p>‐I will no longer be giving support in this thread. Most questions are now repeats. Before asking a question please try searching the forum or reading through the pages of this thread.</p>
+<p>‐The correct DBK32 file has now be uploaded.</p>
+<p>‐Thank Diddle for the alternate download location on MPC.</p>
+<p>‐I have changed my AIM and MSN settings to disallow people who aren’t on my buddy list from contacting me. So please don’t add me to your MSN or PM me on the forum either.<br>Introduction</p>
+<p>Other stickies you should note.</p>
+<p>‐[GMS] v0.21 ‐ Hack values</p>
+<p>‐[GMS] Tutorial ‐ All 4 VAC Hacks</p>
+<p>There is an HTML verision of this tutorial available. [here]. This probably won’t be as updated as this thread, though.</p>
+<p>definately not updated recently. dont use it</p>
+<p>My goals.</p>
+<p>I am hoping this clears up many questions and issues. I will try and be as descriptive as humanly possible. If you have anything to add, please PM me or IM me. You can get all the files needed in one zip.</p>
+<p>In this tutorial, all files needed are separate downloads. If you would like all downloads in one</p>
+<p>compressed    archive,    you    can    download    them    from</p>
+<p>[ <a href="http://www.megaupload.com/?d=QONMUIAN" target="_blank" rel="noopener">http://www.megaupload.com/?d=QONMUIAN</a> ]. Replace the DOTs with the appropriate symbol.</p>
+<p>MPC censors the website. This tutorial does not cover the filenames used in that archive. So</p>
+<p>you’ll have to figure that out for yourself. It should be pretty obvious though. Thanks to Rache for</p>
+<p>the contribution.</p>
+<p>Common Problems</p>
+<p>If you can only use godmode and nothing else [one register change], then you need the modified DBK32 file.</p>
+<p>If your computer reboots when you start MapleStory with CheatEngine</p>
+<p>then try using Abyss webserver and checking over your hosts file / rev 566 server files. If DupeX ListOffset value doesn’t increase</p>
+<p>then there is someone on the map, or you don’t have the modified DBK32 file.</p>
+<p>More to come…</p>
+<p>contribute by replying…</p>
+<p>The Bypass</p>
+<p>What it does. This method of bypassing GameGuard emulates a GameGuard server on your own</p>
+<p>computer. That means instead of MapleStory looking fofr the GameGuard server on it’s own</p>
+<p>website, it will read and update from your own computer. SunBeam put it best when he wrote in</p>
+<p>his thread [link]:</p>
+<p>Quote:</p>
+<p>Originally Posted by SunBeamThis method of “defeating” GameGuard came to life in 2001‐2002. The first game ever having this protection was and still is ‐ MU Online. The ideea of making a server that would “update” GameGuard with old files was commonly used at that time. People simply updated the tutorial and used it on other games that received GameGuard’s “blessing”. Which brings us to these days.</p>
+<p>GameGuard uses a module that determines speed of transfer and checks if updates for any of its modules are available. If yes, the update begins, the modules are re‐initialised, then launched and the game starts.</p>
+<p>Formerly, the tutorial stated that in order to achieve server emulation, one needed to know what</p>
+<p>GameGuard “tells” the server. In simpler terms, where does GameGuard update from and what is</p>
+<p>the server’s structure. Using a simple firewall, one can find the site, but can’t determine the</p>
+<p>server directory from which GameGuard updates. For that I think I’ve heard something about a</p>
+<p>program called Ethereal which caught packets upon send. But it seems, GameGuard’s packets are</p>
+<p>also encrypted nowadays.</p>
+<p>Files you will need.</p>
+<p>To start an emulation server you will need the following. An HTTPD (Web Server), the GameGuard Server Files (rev 566), and a modified host file. These files are hosted in various places, but for your convienience and security, I will provite my own sources.</p>
+<p>a)You will first need to choose a web server. I have heard Abyss works fine, but I specifically use Apache with no problems. You can download Abyss Web Server from their website [here] (aprelium.com). You can download Apache HTTP Server from their website [here]. On that page there are many links. Scroll to where it says “Apache HTTP Server 2.0.55 is also available” and click “Win32 Binary (MSI Installer): apache_2.0.55‐win32‐x86‐no_ssl.msi”</p>
+<p>b)The GameGuard revision 566 server files can be download either [here], or from Katana [here] (In the ‘Hack Downloads’ section)</p>
+<p>c)The modified host file is also available at Katana,. You can also grab it [here].</p>
+<p>Getting started installing.</p>
+<p>This tutorial, due to my lack of knowlege, only will explain how to install Apache. I’m sorry for the inconvenience. Moving on, once you have downloaded the Apache installer, run the file and go through the prompts. It is a standard installer file, and will ask you to confirm the license aggreement and (if you selected custom installation) ask you to choose a install location. It will ask you if you would like to install it as a service on port 80, or as an executable on port 8080. You must install it as a service for this to work. Once you get to the server configuration step, it will ask you for the server name, network name, and email address.</p>
+<p>a)If you are not on a router, skip to step 1b. If you are, you will need to visit [url=<a href="http://www.whatismyip.com[/url]WhatIsMyIP.com[/url]" target="_blank" rel="noopener">http://www.whatismyip.com[/url]WhatIsMyIP.com[/url]</a> and copy your IP address down. Paste it into the server and network (first two) boxes of the Apache installer prompt. Skip to step c.</p>
+<p>b)(If you are not on a router,) put 127.0.0.1 into the server name box and localhost into the network name box.</p>
+<p>c)You may put any valid email address into the third box. (ex: admin@uber‐l33t.net, <a href="mailto:mpcuser@hotmail.com" target="_blank" rel="noopener">mpcuser@hotmail.com</a>, etc.)<br>Extracting the GameGuard Server files. You must pay careful attention to this step.</p>
+<p>a)Navigate to My Computer and click Drive C, Program Files, Apache Group, Apache2, then htdocs.<br>b1) Create a folder named nProtect</p>
+<p>b2) Open nProtect folder. Create a folder named GameGuard</p>
+<p>b3) Open GameGuard folder. Create a folder named RealServer</p>
+<p>c)Open RealServer folder. Open the zip file containing the Revision 566 GameGuard Server files.</p>
+<p>d)Extract all files into RealServer. Overwriting your hosts file.<br>a)Navigate to My Computer. Click Drive C, Windows, system32, drivers, then etc.</p>
+<p>b)Open the zip containing the modified hosts file.</p>
+<p>c)Extract the file into the etc folder, overwriting the old file.</p>
+<p>d)Right click hosts, click Properties. Make sure Read‐Only is ticked. Click OK.</p>
+<p>You have now successfully installed a emulation server for MapleStory. Pat yourself on the back and let’s move on to the next step! Now that you have the server installed you need a program that will allow you to control a program’s memory changes. PrevX Home seems to work fine for this. Why do we need this? Well the nProtect Game Monitor obviously tries to change MapleStory to hind the process. With this, we can allow or deny some of it’s actions. Files you will need.<br>For this obviously you only need PrevX Home. Again, this is available on Katana, but you can also get it [here]</p>
+<p>Configuring the software.</p>
+<p>Extract the installer and run it. It should be fairly simple. Just click through the prompts. When it asks you to restart, do so. Wait for your computer to boot back up, if PrevX does not open automatically, open it. It will ask if you want to check for updates, or it will say it has found updates. Do not let it update. Now for the configuration.</p>
+<p>a)In the bottom left hand corner of Prevx it says “Protection Setting.” Click the arrow and set it to Off as displayed in this image. [click for image]<br>b)Next, on the top of PrevX you should see the tabs labeled “Status,” “Security Settings,” “Event History,” etc. Click Security Settings as illustrated here. [click for image]</p>
+<p>c)Now in the list there should be many settings. If you look there should be one that says “Windows Memory.” Next to it, there isa small plus symbol. Click it. [click for image]</p>
+<p>d)There are four dots. One of them is white, the rest are gray. Click the second gray dot to turn it white. This will change the Windows Memory settings in Prevx from “off” to “query.” Meaning from now on it will ask you what you want PrevX to do when a program tries to change another’s memory.Now you are finished. Remember, when you restart your computer, it will always ask whether you want it to update. Don’t let it. Click NO, then OK.</p>
+<p>Cheat for fun, Cheat for life.</p>
+<p>Now that everything is set up, you could technically start MapleStory. But we don’t have anything to edit MapleStory’s memory with right now, do we? Visit the lovely CheatEngine.org and click Download and then Cheat Engine 5.2. If the download is not available, get it [here] After downloading and extracting the installer file, run it. It as well is pretty straight forward. Choose an install location and you’re off. If it asks you to restart your computer, please do so.</p>
+<p>Configuring your Cheat Engine.</p>
+<p>This step should be followed carefully. If you tick something you aren’t supposed to, bad things could happen.</p>
+<p>a)Launch Cheat Engine. It will ask you a few questions for the first launch. Click through them. You’ll notice the CE logo in the top right corner; under it there is a setting button. Click it. [click for image]</p>
+<p>b)There are six tabs at the top of the Cheat Engine settings. Make sure each one of them looks as displayed in the images bellow.<br>General Settings: [image here]</p>
+<p>Scan Settings: [image here]</p>
+<p>File Associations: image here]</p>
+<p>Code Finder: [image here]</p>
+<p>Assembler: [image here]</p>
+<p>Extra: [image here]</p>
+<p>Note: It is important in this last tab that you not click “Stealthmode (usermode)” as described in DragonBroly’s tutorial. It is not needed and can conflict with kernalmode in some unappealing ways. [eg: restart your computer when closing MapleStory]<br>c)Click OK on the settings dialog. You are all done configuring Cheat Engine!</p>
+<p>Final preparations.</p>
+<p>Before launching MapleStory for your first hacking experience, theres one more thing you need to do. Deleting the GameGuard directory in your MapleStory installation isn’t necessary but it can help assure that GameGuard will force itself to update.</p>
+<p>a)Open My Computer. Click Drive C, Program Files, Wizet, then MapleStory.</p>
+<p>b)Select the GameGuard directory, right click it and then hit Delete.</p>
+<p>You’re finished!</p>
+<p>If you’d like to test everything out before you go hunting for pointers and addresses, you can start all the programs now if they aren’t already started. If Apache was installed as a service, there should be a feather with a green arrow on it in your task bar (bottom right hand corner of your screen) [see picture]. If PrevX is started and configured correctly there should be a green star (without a red X through it) in your taskbar. Al lthat leaves to open is Cheat Engine.Starting MapleStory with CheatEngine.</p>
+<p>a) Launch Cheat Engine. Then launch MapleStory.</p>
+<p>b1) Click the computer button on the top left hand corner of Cheat Engine. [click for image]</p>
+<p>b2) Scroll down and select MapleStory.exe. Click OK. [click for image]</p>
+<p>c)A PrevX Home popup should come up. Click in the following order. [click for image] Allow.<br>Deny.</p>
+<p>Allow.</p>
+<p>MapleStory should now start regularly. Another PrevX popup will come up within one to two minutes. You can dragit off to the side. Do not close, allow, or deny it until you close MapleStory. Using CheatEngine</p>
+<p>1) Addresses</p>
+<p>Today, class we will be learning about addresses. Please take your seats and remember not to pass notes or whisper, or you will be send to the principal’s office. Thank you.</p>
+<p>So let’s think of some scenarios here. You’re a newbie to hacking. You go into the thread named</p>
+<p>‘[OMS] .21 Addresses’ Seems good, yes? To your horror, though, it shows just that, only addresses. You have no idea what to do with them, much less what Tick ZF means. Well, I am your shepard! I will guide you lost sheep to the ultimate hacking experience!</p>
+<p>Most of the time when a thread just gives you an address and the words “Tick ZF” or “EAX 1,” it</p>
+<p>means you are changing the addresses registers. This is done through the Memory View and is</p>
+<p>explained bellow.</p>
+<p>Changing Registers</p>
+<p>a)In Cheat Engine click the Memory View button. (You should have familiarized yourself with the program by now. I won’t be providing screenshots for this section unless it is requested a lot)<br>b)Hit Ctrl+G (Goto Address)</p>
+<p>c)Type the address that was given to you or you read about. Click Ok.</p>
+<p>d)An address should now be highlighted on the top of the list. Right click that and select ‘Change registers at this location.’</p>
+<p>e)Depending on what it said in the thread will determine what you do here. If it tells you to Tick ZF, or says ZF=0, Tick the ZF box once. It’s simple. If it says EAX 1, tick the EAX box, and type 1 into the space next to it. We’ll do some more complicated things later.<br>MapleStory Global 0.21 Addresses</p>
+<p>Unlimited Jump: Allows you to jump continuously one after another. You must hold down a directional key, unless you have the second address. It’s simple to find and I won’t give it out unless it is told by someone else first. 5ee77a (ZF 0)<br>Full Godmode: Protects you from melee, magic, and object damage. You must be damage first before it is activated on each map you enter. 5b66c2 (ZF 0)</p>
+<p>Melee Godmode: There are two addresses for this. One protects you from objects and monster damage. 5C0E03 (ZF 0) And the other only protects your from objects. 5C0E5F (ZF 0)<br>Super Tubi: Tubi is a nickname for looting items much faster than normal. This address apparently loots faster than Tubi, making it Super Tubi! (Credits to TKC for finding this) 4697f8 (ZF 1) Note, if ZF 0 was only one ZF box, then ZF 1 must be two.<br>Fast Attack Speed: Careful. This one will disconnect you. It obviously increases your attacking speed. Set EAX to 0 or lower. 424422 (EAX</p>
+<p>2) Pointers</p>
+<p>Class, things are progressing nicely, lets keep it this way Susie, don’t throw that paper airplane! As stated in Dark Byte’s thread on the Cheat Engine Forum [link]</p>
+<p>Quote:</p>
+<p>Originally Posted by Dark BytePointers are 4 byte values that hold the the address of a memorylocation instead of a normal value.<br>That address is used by the game to find out where to store and look for it’s data. E.g: 10 bytes after the pointer to the start of the player data is health, 14 bytes after the start of the player data is armor, 18 bytes after the player is ammo etc.When you read a thread and it just says “50000a + C,” or “Address: 50000a, Offset: C” that is a pointer. Pointers are not manipulated in the Memory Viewer as registers are. They are dealt with in the main Cheat Engine window. So close the memory viewer now if it is open.<br>a)Click ‘Add Address Manually.’ (Opposite the Memory View button)</p>
+<p>b)Do not type any addresses in the Address box, instead, click “Pointer.”</p>
+<p>c)The words “This pointer points to: ??????” should come up. Bellow that, there are two boxes.</p>
+<p>One says “Address of pointer,” the other says “Offset (Hex).” Type the address in the first, and the offset (if “50000a + C” if your pointer, “C” is your offset) in the second. Note: This pointer points to: ????? shoulod have changed.</p>
+<p>d)Click ok. An address should have popped up in your cheat table. Now if the thread said to “Freeze @ 0,” that would mean you need to change the value of the pointer to 0, and then click the freeze box. If you double click the address in the value column, you can change it that way. On the far left, there is a column labeled Freeze. If you tick the box, it will freeze the value so it does not change.<br>MapleStory Global 0.21 Pointers</p>
+<p>Unlimited Attack: MapleStory prevents you from attacking in one posistion over 100 timesi n a row. This will disable that limit.</p>
+<p>6C60F4 + D60 (Freeze @ 0)</p>
+<p>Anti‐breath: When you attack, you cannot equip an item or change channels for a few seconds. Same goes for when you get hit by a monster or object. This disables that.<br>6C60F4 + 230 (Freeze @ 0)</p>
+<p>NOTE: The following are not pointers, they are just manually added addresses to the Cheat Table. You can add them by simply typing the address (without clicking pointer) and then changing the Type of Byte if necessary.</p>
+<p>Tubi: This address will allow you to pick up items without the normal delay you get. 6C91A8 (1 byte) Freeze @ 0<br>Let’s take it nice and easy now. You may be wondering where all the vacs are. Well I’ve put them in another section of course. Gosh, silly.</p>
+<p>3) Vacuums</p>
+<p>Vacuum hacks in theory will take all the monsters on the map and move them to a desired location. Depending on the type of vacuum you use, dpeends on where they are moved to exactly.</p>
+<p>With the ‘wall’ vacuum, you are changing the wall boundries of the map so that the mosnters will spawn to one point, while this works to an extent, if you change channel, you will be sucked to that point as well. Pointers are used for this vacuum.</p>
+<p>With ‘DupeX’ vacuum, depending on the flavor you want, normal or monster, either all the monsters will be vacuumed to your posistion and follow you, or they will stay stationary. A auto‐assemble injection code is used for this vacuum followed by a few register changes.</p>
+<p>With a client sided ‘EAX’ vacuum, you and all monsters and NPCs will automatically be sucked to the point you input. Other players will not see you move from where you origionally were. This vacuum uses Hexadecimal converted X and Y coordinated inserted into the EAX register of an address.</p>
+<p>With a server sided ‘EAX’ vacuum, you can specify a Y axis to be sucked to, along with all monsters and NPCs. Once there, you can walk anwhere on the Y axis, including on the air. When you jump, though, you will fall until you hit a surface, and then by sucked back to the Y axis. A noticable different between this and the clientsided version is that the other players will see you i nthe posistion you are really in. To use this vacuum, the same is done for client sided, except it uses different addresses. Optionally, you can use the X axis too, but some like to use a DupeX or Wall with this vacuum, so they can move still.</p>
+<p>So now that you have all the information on these wonderful hacks, choose one you’d like to test drive.</p>
+<p>MapleStory Global 0.21 Vacuums</p>
+<p>a) Wall</p>
+<p>Add the following addresses manually to your Cheat Table.</p>
+<p>Left Wall: 6C5794 (address) + 4 (offset);</p>
+<p>Right Wall: 6C5794 (address) + C (offset);</p>
+<p>Top Wall: 6C5794 (address) + 8 (offset);</p>
+<p>Bottom Wall: 6C5794 (address) + 10 (offset);</p>
+<p>X Coordinate: 6C6130 (address) + 564 (offset);</p>
+<p>Y Coordinate: 6C6130 (address) + 568 (offset);</p>
+<p>Your X and Y coordinates are the posistion of your character on the map. (OMG you’re algebra class paid off?) The left, right, top and bottom walls are the boundries of the map.</p>
+<p>To use this vacuum, move to a posistion you would like to suck the mosnters to. Generally, you must be in an area where the mosnters will not get stuck on the platforms when they are sucked. That means no platforms can be above or bellow you. It has to be somewhat of an empty area. Usually the far left and right are good wall vacuum locations.</p>
+<p>When you have found an area, look at your X and Y coordinates. Double click your left wall value and change it to your X coordinate. Do the same for your right wall value. For your top and bottom all values, change them to your Y coordinate.</p>
+<p>If you do not want to be sucked in with the rest of the monsters, do not change channel. To have all the mosnters spawn in your new vacuum area, you need to go through the map and kill everything. From then on, the monster will spawn within the new designated boundries.</p>
+<p>b) DupeX</p>
+<p>It is obviously a good idea to have a godmode on before aply this vacuum. For this, you will need the modified DBK32 file for your Cheat Engine. Download it [here]. To use it, close Cheat Engine and extract it to the program directory (C:/program files/Cheat Engine/). You can now have up to four register changes in the Memory View.</p>
+<p>First off, enter the Memory Viewer and hit Ctrl+A, to enter the Auto‐Assembler. Paste the following code into the box and hit OK. A list of addresses will pop up. You only need the first four numbers / letters of one of the addresses. The last four stay the same constantly with each injection of the code.</p>
+<p>DupeX (Monsters will follow you.)</p>
+<p>Code:</p>
+<p>alloc(FindCharacterAddress, 1024)</p>
+<p>alloc(ListOffset, 4)</p>
+<p>alloc(ESIList, 1024)</p>
+<p>alloc(DupeXVac, 1024)</p>
+<p>alloc(EDIvalue, 4)</p>
+<p>label(EndSearch)</p>
+<p>label(CompareOffset)</p>
+<p>label(StoreESI)</p>
+<p>label(DoNormal)</p>
+<p>FindCharacterAddress:</p>
+<p>mov [esi+114],edi</p>
+<p>push eax</p>
+<p>push ebx</p>
+<p>push ecx</p>
+<p>push edx</p>
+<p>mov eax,0</p>
+<p>mov ebx,ListOffset</p>
+<p>mov ecx,ESIList</p>
+<p>mov edx,EDIvalue</p>
+<p>CompareOffset:</p>
+<p>cmp eax,[ebx]</p>
+<p>je StoreESI</p>
+<p>cmp esi,[ecx+eax*4]</p>
+<p>je EndSearch</p>
+<p>inc eax</p>
+<p>jmp CompareOffset</p>
+<p>StoreESI:</p>
+<p>mov [ecx+eax*4],esi</p>
+<p>inc eax</p>
+<p>mov [ebx],eax</p>
+<p>mov [edx],edi</p>
+<p>EndSearch:</p>
+<p>pop edx</p>
+<p>pop ecx</p>
+<p>pop ebx</p>
+<p>pop eax</p>
+<p>jmp 5F0DE2</p>
+<p>DupeXVac:</p>
+<p>push eax</p>
+<p>push ebx</p>
+<p>push ecx</p>
+<p>mov ebx,[ListOffset]</p>
+<p>dec ebx</p>
+<p>mov ecx,ESIList</p>
+<p>mov eax,[ecx+ebx*4]</p>
+<p>cmp esi,eax</p>
+<p>je DoNormal</p>
+<p>mov edi,[eax+114]</p>
+<p>DoNormal:</p>
+<p>mov [esi+114],edi</p>
+<p>pop eax</p>
+<p>pop ebx</p>
+<p>pop ecx</p>
+<p>jmp 5F0DE2</p>
+<p>DupeXMonster (Monsters will stay in one posistion)</p>
+<p>Code:</p>
+<p>alloc(FindCharacterAddress, 1024)</p>
+<p>alloc(ListOffset, 4)</p>
+<p>alloc(ESIList, 1024)</p>
+<p>alloc(DupeXVac, 1024)</p>
+<p>alloc(EDIvalue, 4)</p>
+<p>label(EndSearch)</p>
+<p>label(CompareOffset)</p>
+<p>label(StoreESI)</p>
+<p>label(DoNormal)</p>
+<p>FindCharacterAddress:</p>
+<p>mov [esi+114],edi</p>
+<p>push eax</p>
+<p>push ebx</p>
+<p>push ecx</p>
+<p>push edx</p>
+<p>mov eax,0</p>
+<p>mov ebx,ListOffset</p>
+<p>mov ecx,ESIList</p>
+<p>mov edx,EDIvalue</p>
+<p>CompareOffset:</p>
+<p>cmp eax,[ebx]</p>
+<p>je StoreESI</p>
+<p>cmp esi,[ecx+eax*4]</p>
+<p>je EndSearch</p>
+<p>inc eax</p>
+<p>jmp CompareOffset</p>
+<p>StoreESI:</p>
+<p>mov [ecx+eax*4],esi</p>
+<p>inc eax</p>
+<p>mov [ebx],eax</p>
+<p>mov [edx],edi</p>
+<p>EndSearch:</p>
+<p>pop edx</p>
+<p>pop ecx</p>
+<p>pop ebx</p>
+<p>pop eax</p>
+<p>jmp 5f0dfa</p>
+<p>DupeXVac:</p>
+<p>push eax</p>
+<p>push ebx</p>
+<p>push ecx</p>
+<p>mov ebx,[ListOffset]</p>
+<p>dec ebx</p>
+<p>mov ecx,ESIList</p>
+<p>mov eax,[ecx+ebx*4]</p>
+<p>cmp esi,eax</p>
+<p>je DoNormal</p>
+<p>mov edi,[EDIvalue]</p>
+<p>DoNormal:</p>
+<p>mov [esi+114],edi</p>
+<p>pop eax</p>
+<p>pop ebx</p>
+<p>pop ecx</p>
+<p>jmp 5f0dfa</p>
+<p>Switch to your main Cheat Engine window. You may close the Memory Viewer if you like. Add an address manually. Type in the address ending in 0400. (EX: 0D010400) Name it in the description “ListOffset” if you like. The value should be zero.</p>
+<p>Return to the Memory Viewer and goto (Ctrl+G) 5F0DDF. Right‐click it and ‘Change registers at this location.’ Tick EIP and type the address ending in 0000.</p>
+<p>Switch to the main CE window. The ListOffset value should be increasing. Wait for it to stop, it is reading the mosnters movement on the map.</p>
+<p>Once it stops increasing, return to MapleStory, and move a bit on your own character. Tab out of MapleStory and look at the ListOffset value. It should have increased by one (possibly two if you have a pet).</p>
+<p>Return to the Memory Viewer and change the register at 5F0DDF again. Leave EIP ticked, jsut change thet last four digits of that address to 0804. Return to MapleStory, and all the monsters should be sucked to your location.</p>
+<p>To turn this vacuum off, enter the Memory Viewer and click View ‐&gt; Breakpointlist. Find 5F0DDF and click it. Then click delete. Change the value of Listoffset to zero. c) Clientsided EAX</p>
+<p>For this you will need the wall vacuum’s X and Y coordinates in your Cheat Table. You will be converting their values into Hexadecimal. Windows Calculator does not work well for this as it does not factor in negative values. Cheat Engine, though, does. If you right click the X or Y coordinate, and select, “Show this value in Hexadecimal,” it will show you the converted Hexadecmal value.</p>
+<p>Now switch to Memory View and goto (Ctrl+G) 5F1CC1. Right‐click it and change the register. Tick EAX and type in the converted hexadecimal value of the X coordinate.</p>
+<p>Goto (Ctrl+G) 5F1D26. Chagne the register. Tick EAX. Type the converted hexadecimal vale of the Y coordinate.</p>
+<p>Return to the game. You, all NPCs, and all monsters should be sucked to the posistion you entered. Remember that other players will see you in the origional posistion. I do not know the exact specifics about what other players can and cannot see, but if anyone would like to test it out with a friend, please PM me your findings and I will add it to this section.</p>
+<p>To remove this vacuum, enter the Breakpointlist in Memory View (View ‐&gt; Breakpointlist) and delete 5F1CC1 and 5F1D26</p>
+<p>d) Serversided EAX</p>
+<p>WARNING: I have now thouroughly tested the ‘serverside’ EAX vacuum and have concluded that it is not a safe method of vacuuming. If a user comes into view of your dot on the minimap, your character is pulled to ground level no matter where you are [underground, in the sky]. Use it with caution and at your own risk.</p>
+<p>As for the clientsided version of the EAX vacuum, you need the X and Y coordinates from the wall vacuum. Switch your X and Y coordinates to the converted Hexadecimal values.</p>
+<p>Enter Memory View, goto (Ctrl+G) 5ee1b4. This is the Y axis address. Change the register on it. Tick EAX and enter the converted hexadecimal value of the Y coordinate. If you return to MapleStory right now, you will find that you can walk to the air of that Y axis. You will fall if you jump. Once you hit the ground, though you will be returned to the Y axis.</p>
+<p>Be careful when vacuuming to the top of the map and attacking mosnters in the air. Sometimes you will fall to the ground but it will not show on your screen. I suggest using this to vacuum monsters bellow the ground. If you do this though, make sure other players cannot see you or click you so you will not be reported.</p>
+<p>I suggest using DupeX or Wall with this instead of the X axis address. If you’d like to experiment,</p>
+<p>though, the X axis address is 5ee18e.</p>
+<p>e) Item</p>
+<p>NOTE: This is not actually an item vacuum. It is just in this section because that is it’s most used function. It does not, though, suck all items to a location because these addresses are the character’s write points. What you can do is loot from a point without actually being there.</p>
+<p>On the main CE window, click Add Address Manually and then click Pointer. Add 6c60F4 as the address and 344 as the offset. Label it something like “Write [x].” Add another pointer. This time the address is 6c60F4 and the offset is 348. Lable it “Write [y].”</p>
+<p>To use this, move in the game to the posistion you would like to loot from. Return to CE and freeze the addresses. Go back into the game and drop an item. Move away from the item and loot. The item will loot as if you were standing there.</p>
+<p>NOTE: The loot speed of this alone is very slow. If you use Tubi with this and hold down the loot key, it will be faster.</p>
+<p>4)Unrandomizer Unrandomized Dice Roll<br>Hate spending all that time making 4/4 characters? Now you don’t have to anymore!</p>
+<p>Login and create a character on a server. Choose the name, check it, and then tab down to Cheat Engne. Now depending on what you’d like a 13 in, dpeends on how you will configure the unrandomizer. Go into the Cheat Engine settings and in the first tab, click Configure Unrandomizer. Type 0 for Strength, 1 for Dexterity, 2 for Intelligence, or 3 for Luck. Hit ok. Close the CE settings.<br>Tick Unrandomizer on the main CE window and then return to MapleStory. Roll the dice. You should have recieved a 13 in the stat you wanted and a 4 in everything else. Tab back out of MapleStory and into CE. When the unrandomizer checkbox reappears, untick it. Return to MapleStory and continue creating your character. You are done!<br>Unrandomized Attack Type</p>
+<p>NOTE: I have obtained permission to post this from SunBeam. All credit for the script goes to him. Enter Memory Veiw and Ctrl+A to access the Auto‐Assembler. Copy the following into the space</p>
+<p>provided.</p>
+<p>Code:</p>
+<p>FULLACCESS(400320,4)</p>
+<p>400320:</p>
+<p>mov eax,00000079</p>
+<p>ret</p>
+<p>dec eax</p>
+<p>adc al,69</p>
+<p>leave</p>
+<p>std</p>
+<p>inc ebx</p>
+<p>add eax,[eax]</p>
+<p>add ecx,00269ec3</p>
+<p>mov [eax+14],ecx</p>
+<p>mov eax,ecx</p>
+<p>shr eax,10</p>
+<p>and eax,00007fff</p>
+<p>ret</p>
+<p>jmp 635447</p>
+<p>Hit OK and close the Auto‐Assembler. In Membery view goto (Ctrl+G) 635425 and change the</p>
+<p>registers. Tick EIP and set it to 400320.</p>
+<p>According to SunBeam:</p>
+<p>*This will freeze monsters from moving but they will regain movement once you attack.</p>
+<p>*You will always swing when you attack, thus doing more damage.</p>
+<p>To disable this, go into Memory View, View ‐&gt; Breakpointlist, delete 635425.</p>
+<p>Windowed Mode</p>
+<p>So you like to be able to use other programs without tabbing down, right? I do too. This section explainshow to use the d3d8.dll file to run MapleStory in windowed mode. A bypass is required. Included [here] is a zip with d3d8.dll and maplestory.bat. Heres what you do with them:</p>
+<p>a)Extract the zip file to your desktop.</p>
+<p>b)Open My Computer; double‐click Drive C, Program Files, Wizet, then MapleStory, or click [here].</p>
+<p>c)Move d3d8.dll into the MapleStory folder you just opened.</p>
+<p>d)Open maplestory.bat to open the game in windowed mode.</p>
+<p>Note: To play the game in full‐screen mode, you must move d3d8.bat out of the MapleStory directory, otherwise, when starting maple you will get an error message in Korean.</p>
+<p>Note: The included bat file tries to open from C:/Program Files/Wizet/MapleStory/. If you do not have MapleStory installed there you need to edit the bat file.</p>
+<p>GameGuard Error Refferance</p>
+<p>As posted on mSecrets, [here] by wubawuba</p>
+<p>Quote:</p>
+<p>Originally Posted by wubawuba</p>
+<p>Error 110 ‐ This is indicating that NProtect has already been loaded once and is still resident in</p>
+<p>memory. Please hit CONTROL‐SHIFT‐ESCAPE to bring up the task manager, click processes, and perform an end process on trose.exe and GameMon.des. If ending these processes does not resolve the error, please reboot your PC.</p>
+<p>Error 112 ‐ Please be sure your PC is free of viruses, and that sufficient memory is available. You may wish to make sure your virus scanning program is up‐to‐date and functioning properly, and that you do not have too many other open programs.</p>
+<p>Error 114 ‐ Unfortunately a specific solution to this error is unavailable. In general, it is indicating that some software on your PC is preventing NProtect from loading. Please verify that you have administrative access to the PC you are using, and that you have shut down all nonessential software. Also, you may wish to end any unnecessary system services or processes if you feel comfortable doing so. You may also wish to try teporarily disabling any virus scanning, firewall, or security software on your PC.</p>
+<p>Error 120 ‐ Your installation of NProtect is either incomplete or damaged. Please delete the GameGuard folder and repatch MapleStory, or try clicking on the [Check Files] button. Error 124, 141, 142, 150, 153 ‐ Same as Error 120</p>
+<p>Error 155 ‐ This error should not occur under Windows XP. If it is encountered, your PC may have a severe virus or be experiencing Operating System / Hard Disk corruption. Please visit <a href="http://www.microsoft.com/" target="_blank" rel="noopener">http://www.microsoft.com/</a> for assistance in restoring this file for your particular OS version. If you are unable to restore it, we recommend contacting a qualified PC technician to examine your PC.</p>
+<p>Error 170 ‐ Due to a problem with the GameGuard INI, the program was unable to launch. We recommend deleting the GameGuard folder and re‐running the MapleStory patch program again in order to redownload the NProtect files.</p>
+<p>Error 340 ‐ This is indicating that the NProtect patches failed to download, either due to an overly restrictive firewall or network issues leading to failed downloads [such as timeouts, corrupted packets, etc.] We recommend checking your firewall settings as well as your current connection stability, and trying again at a later time.</p>
+<p>From MapleGlobal: “This Error occurs when GameGuard fails to connect and download from server.”</p>
+<p>Error 350 ‐ The NProtect patcher was cancelled. Please close MapleStory and NProtect and load the game anew.</p>
+<p>Error 360 ‐ The NProtect patch process failed due to corrupted files, or an overly restrictive firewall. Please be sure to allow NProtect access through your firewall. If the problem persists, delete the GameGuard directory and run the MapleStory patcher again.</p>
+<p>Error 361 ‐ Gameguard did not install well. Maybe you cancelled it or something. Either Re‐download gameguard or goto Internet&gt;Settings&gt;Network&gt;Check security program on top is working or not. Also check if you need to get authorized to use the internet.</p>
+<p>Error 380 ‐ This is indicating that either there is a problem with your internet connection, security software on your PC is blocking NProtect from accessing its patch server, or the NProtect patch server is temporarily down. You may wish to wait a while and try again, and verify your firewall settings, as well.This is an awesome refferance and I commend wubawuba for taking the time to find all the error, gather information on them and post this for everyone. I hope it helps and clears up your problems / allows you to find and fix them. Conclusion</p>
+<p>I hope you have learned and profited from this tutorial. Please keep in mind that Knowlege is Power, and with great knowlege comes great responsibility. When you are using a vacuum, always clean up the mosnters afterwards so they spawn normally.</p>
+<p>Do not repost this tutorial on any other forum! While the addresses, injection code, pointers and steps taken to achieve these hacks is public domain, this tutorial is not. Do not redistribute it.</p>
+<p>I will not ask for this to be stickied, but I think it would clean up the forum and cut down on the questions if it were. It’s ultimately up to the moderators, though.</p>
+<p>If you find any spelling mistakes or would like to add to this tutorial, please let me know in a PM</p>
+<p>here or an IM.</p>
+<p>reserved</p>
+<hr>
+<p>Quote:</p>
+<p>Originally Posted by #mpc_ms</p>
+<p>*Hitmaster reaches out to Paine with open arms</p>
+<p>*Paine Should warn you he’s currently naked.</p>
+<p>*Hitmaster cowers in fear</p>
+<p>*Hitmaster but then realizes you’re a man</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="那方贤 wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫，跑不了</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>我亦飘零久，十年来，深恩负尽，死生师友。</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="那方贤 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="那方贤 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/何处惹尘埃/" rel="tag"><i class="fa fa-tag"></i> 何处惹尘埃</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/12/06/何处惹尘埃/从零到一/" rel="next" title="从零到一">
+                <i class="fa fa-chevron-left"></i> 从零到一
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div id="gitalk-container"></div>
+
+  
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="那方贤">
+            
+              <p class="site-author-name" itemprop="name">那方贤</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lyx913" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/sinat_34663079" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-copyright"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/2504337221" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/na-fang-xian" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-search"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">那方贤</span>
+
+  
+</div>
+
+
+  
+<div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+     本站访客数:<span id="busuanzi_value_site_pv"></span>
+  </span>
+  </div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '4f2598e094d54441d30c',
+          clientSecret: '3b90d993a3d1a74b088d90b2da5df39b6f933c82',
+          repo: 'lyx913.github.io',
+          owner: 'lyx913',
+          admin: ['lyx913'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- <script type="text/javascript" src="/js/src/dynamic_bg.js"></script> -->
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
